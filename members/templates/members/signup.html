@@ -1,0 +1,11 @@
+{% extends "members/base.html" %}
+{% block title %}عضویت{% endblock %}
+{% block content %}
+  <h1>عضویت</h1>
+  <p>پس از ثبت‌نام، نام کاربری شما کد ملی و رمز اولیه شماره شناسنامه خواهد بود.</p>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ثبت عضویت</button>
+  </form>
+{% endblock %}

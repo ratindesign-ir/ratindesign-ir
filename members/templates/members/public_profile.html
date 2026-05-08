@@ -1,0 +1,7 @@
+{% extends "members/base.html" %}
+{% block title %}پروفایل عمومی{% endblock %}
+{% block content %}
+  <h1>پروفایل عمومی {{ member.get_full_name|default:member.national_code }}</h1>
+  <p>کد ملی: {{ member.national_code }}</p>
+  {% include "members/_financial_summary.html" %}
+{% endblock %}
